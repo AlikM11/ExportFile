@@ -1,0 +1,41 @@
+﻿<Application x:Class="ExportFile.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ExportFile.ViewModels"
+             xmlns:views="clr-namespace:ExportFile.Views">
+    <Application.Resources>
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type local:WorkPeopleViewModel}">
+                <views:WorkPeopleView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type local:FootballerViewModel}">
+                <views:FootballerView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type local:ProductViewModel}">
+                <views:ProductView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type local:CarViewModel}">
+                <views:CarView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type local:CompanyViewModel}">
+                <views:CompanyView/>
+            </DataTemplate>
+            <Style x:Key="RoundedButtonTemplate" TargetType="Button">
+                <Setter Property="Background" Value="DodgerBlue"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+                                </ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+    
+</Application>
